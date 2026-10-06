@@ -1,0 +1,125 @@
+/* ---------- 1. Design tokens: change these to re-theme the whole site ---------- */
+:root {
+  --bg: #f6f7f9;
+  --ink: #18212b;
+  --muted: #56616d;
+  --line: #d6dce3;
+  --accent: #1f4fd8;
+  --accent-soft: #e5ebfc;
+  --font: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 46rem;      /* keeps lines of text a comfortable length */
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a { color: var(--accent); }
+
+/* Visible outline for keyboard users */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 { line-height: 1.15; margin: 0 0 0.75rem; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: 1.6rem; font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p  { margin: 0 0 1rem; }
+
+/* ---------- 3. Layout ---------- */
+main, .site-header, .site-footer {
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
+}
+
+section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+
+/* ---------- 4. Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: var(--bg);
+}
+.logo { font-weight: 800; color: var(--ink); text-decoration: none; }
+nav { display: flex; gap: 1.25rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* ---------- 5. Hero ---------- */
+.hero { border-top: none; padding-top: 4rem; }
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 36rem; }
+
+/* ---------- 6. Buttons ---------- */
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.button {
+  font: inherit;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: var(--accent-soft); }
+.button.primary { background: var(--accent); color: #fff; }
+.button.primary:hover { background: #173ea8; border-color: #173ea8; }
+
+/* ---------- 7. Projects ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+.project {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+.tags { font-size: 0.9rem; color: var(--muted); }
+.links { display: flex; gap: 1.25rem; margin: 0; font-weight: 600; }
+
+/* ---------- 8. Skills ---------- */
+.skills { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+.skills li {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+/* ---------- 9. Footer ---------- */
+.site-footer { padding: 2rem 0 3rem; color: var(--muted); border-top: 1px solid var(--line); }
+
+/* ---------- 10. Small screens ---------- */
+@media (max-width: 34rem) {
+  nav { gap: 1rem; font-size: 0.95rem; }
+  section { padding: 2.5rem 0; }
+}
+
+/* Respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
