@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- EDIT: put your name in the title -->
   <title>Bishesh Raut | Web Developer</title>
-  <meta name="description" content="Portfolio of Your Name, a CS student building web apps.">
+  <meta name="description" content="Portfolio of Bishesh Raut, a computer science student building web apps with HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#0b6e63">
+  <meta property="og:title" content="Bishesh Raut | Web Developer">
+  <meta property="og:description" content="Computer science student building web apps. Open to internships and junior roles.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6e63'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3EBR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#top">Skip to content</a>
 
   <header class="site-header">
-    <a class="logo" href="#top">Your Name</a>
+    <a class="logo" href="#top">Bishesh Raut</a>
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -25,63 +30,61 @@
 
   <main id="top">
 
-    <!-- HERO: the first thing people see -->
     <section class="hero">
-      <h1>Hi, I'm Bishesh Raut. I build things for the web.</h1>
-      <!-- EDIT: one honest sentence about you -->
-      <p class="lead">I'm a computer science student studying software and web app development. I'm learning by building small things ands doing projects.</p>
+      <p class="status"><span class="dot" aria-hidden="true"></span>Open to internships and junior roles</p>
+      <h1>I build web apps that people can open and use.</h1>
+      <p class="lead">I'm Bishesh Raut, a computer science student studying software and web app development. I learn by building small, finished projects.</p>
       <div class="actions">
         <a class="button primary" href="#projects">See my projects</a>
         <a class="button" href="#contact">Get in touch</a>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
-      <h2>About me</h2>
-      <!-- EDIT: 3 to 4 sentences. What you study, what you enjoy, what you want to do next. -->
-      <p>I study computer science and I'm focused on web app development. I enjoy turning an idea into something people can open in a browser and use. Right now I'm learning JavaScript and building my first projects. I'm looking real work experince where I can learn from a team and contribute.</p>
+      <h2>About</h2>
+      <p>I study computer science and focus on web app development. I enjoy turning an idea into something that works in a browser. Right now I'm learning JavaScript and building my first projects.</p>
+      <p>I'm looking for real work experience where I can learn from a team and contribute.</p>
     </section>
 
-    <!-- PROJECTS: replace each card with a real project as you finish it -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-grid">
 
-        <article class="project">
+      <article class="project">
+        <div>
           <h3>To-Do App</h3>
-          <p>Add, complete, and delete tasks. Tasks are saved in the browser so they are still there after a refresh.</p>
           <p class="tags">HTML, CSS, JavaScript</p>
-          <p class="links">
-            <!-- EDIT: replace # with your real links -->
-            <a href="#">Live demo</a>
-            <a href="#">GitHub</a>
-          </p>
-        </article>
+        </div>
+        <div>
+          <p>Add, complete, and delete tasks. Tasks are saved in the browser, so they are still there after a refresh.</p>
+          <!-- EDIT: add a <p class="links"> with Live demo and GitHub links when this project is online -->
+        </div>
+      </article>
 
-        <article class="project">
+      <article class="project">
+        <div>
           <h3>Weather App</h3>
-          <p>Search for a city and see its current weather, using data from a free weather API.</p>
           <p class="tags">JavaScript, REST API</p>
-          <p class="links">
-            <a href="#">Live demo</a>
-            <a href="#">GitHub</a>
-          </p>
-        </article>
+        </div>
+        <div>
+          <p>Search for a city and see its current weather, using data from a free weather API.</p>
+          <!-- EDIT: add a <p class="links"> with Live demo and GitHub links when this project is online -->
+        </div>
+      </article>
 
-        <article class="project">
-          <h3>This Portfolio</h3>
-          <p>The site you're looking at. Responsive, hand-written, and hosted for free.</p>
+      <article class="project">
+        <div>
+          <h3>This portfolio</h3>
           <p class="tags">HTML, CSS, JavaScript</p>
+        </div>
+        <div>
+          <p>The site you're looking at. Responsive, accessible, hand-written, and hosted on Vercel.</p>
           <p class="links">
-            <a href="#">GitHub</a>
+            <a href="https://github.com/bisheshr/Portfolio">GitHub</a>
           </p>
-        </article>
-
-      </div>
+        </div>
+      </article>
     </section>
 
-    <!-- SKILLS: only list what you have actually used -->
     <section id="skills">
       <h2>Skills</h2>
       <ul class="skills">
@@ -89,29 +92,27 @@
         <li>CSS</li>
         <li>JavaScript</li>
         <li>Git and GitHub</li>
-        <!-- EDIT: add or remove items, e.g. <li>React</li>, <li>Python</li>, <li>SQL</li> -->
       </ul>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>I'm open to internships and junior roles. The best way to reach me is email.</p>
+      <p>The best way to reach me is email.</p>
       <p class="actions">
         <!-- EDIT: use your real email and profile links -->
-        <a class="button primary" id="email-link" href="mailto:you@example.com">you@example.com</a>
-        <button class="button" id="copy-email" type="button">Copy email</button>
+        <a class="button primary" id="email-link" href="mailto:braut429@gmail.com">braut429@gmail.com</a>
+        <button class="button" id="copy-email" type="button" aria-live="polite">Copy email</button>
       </p>
       <p class="links">
-        <a href="https://github.com/your-username">GitHub</a>
-        <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+        <a href="https://github.com/bisheshr">GitHub</a>
+        <a href="https://www.linkedin.com/in/bishesh-raut-4393013a6/">LinkedIn</a>
       </p>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Your Name</p>
+    <p>&copy; <span id="year"></span> Bishesh Raut</p>
   </footer>
 
   <script src="script.js"></script>
