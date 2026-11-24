@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bishesh Raut — Web Developer</title>
+  <meta name="description" content="Bishesh Raut is a computer science student exploring web development, creative coding, and the systems underneath.">
+  <meta name="theme-color" content="#151612">
+  <meta property="og:title" content="Bishesh Raut — Web Developer">
+  <meta property="og:description" content="Projects in creative coding, web development, and computer science.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true">br<span>.</span></span><span>Bishesh Raut</span></a>
+      <nav aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="indicator"></span> Open to internships</p>
+        <h1 id="hero-title">Bishesh<br><em>Raut<span>.</span></em></h1>
+        <p class="intro">Computer science student and web developer. I build small apps and use creative coding to explore how things work.</p>
+        <a class="button primary" href="#work">Explore my work</a>
+      </div>
+      <figure class="experiment">
+        <div class="experiment-top"><span>Letter Ring</span><span>JavaScript / Canvas</span></div>
+        <div class="stage">
+          <canvas id="ring" role="img" aria-label="A gemstone ring rendered in glowing ASCII characters."></canvas>
+          <span class="stage-corner top-left" aria-hidden="true"></span><span class="stage-corner top-right" aria-hidden="true"></span>
+          <span class="stage-corner bottom-left" aria-hidden="true"></span><span class="stage-corner bottom-right" aria-hidden="true"></span>
+        </div>
+        <figcaption class="experiment-bottom">
+          <span>3D ASCII study</span>
+          <div class="experiment-actions">
+            <button id="replay" type="button" hidden>Replay</button>
+            <button id="playback" type="button" hidden>Pause</button>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="work-title">Selected work<span>.</span></h2>
+        </div>
+        <article class="project featured">
+          <div class="project-copy">
+            <p class="eyebrow">Python / Automata</p>
+            <h3>MarkdownMark</h3>
+            <p>A Markdown-to-HTML transpiler that shows each stage of the parse, from recognizing tokens to validating nested formatting and resolving reference links.</p>
+            <p class="project-detail">Step through a real output from the project to see what each stage does.</p>
+          </div>
+          <div class="trace">
+            <div class="trace-header">
+              <label for="example">Sample input</label>
+              <select id="example" disabled><option value="nested">Nested formatting</option><option value="crossed">Crossing tags</option><option value="reference">Reference link</option></select>
+            </div>
+            <pre class="trace-input" id="trace-input">**bold *italic* text**</pre>
+            <div class="trace-controls" role="group" aria-label="Parser stage">
+              <button type="button" data-step="0" aria-pressed="true" disabled>DFA lexer</button>
+              <button type="button" data-step="1" aria-pressed="false" disabled>PDA stack</button>
+              <button type="button" data-step="2" aria-pressed="false" disabled>TM resolver</button>
+            </div>
+            <div class="trace-result" aria-live="polite">
+              <p id="trace-verdict" data-state="accepted">Accepted</p>
+              <pre id="trace-output">The lexer recognizes bold and italic markers.</pre>
+            </div>
+          </div>
+        </article>
+        <div class="project-grid">
+          <article class="project">
+            <p class="eyebrow">JavaScript / Creative coding</p>
+            <h3>Letter Ring</h3>
+            <p>A rotating gemstone ring drawn with text. The canvas projects 3D particles into view, with reflections and highlights that change as the ring turns.</p>
+            <div class="text-links"><a href="#top">Play the demo</a><a href="https://github.com/bisheshr/Portfolio/blob/main/ring.js">View source</a></div>
+          </article>
+          <article class="project">
+            <p class="eyebrow">C++ / Coursework</p>
+            <h3>Data structures &amp; algorithms</h3>
+            <p>Coursework exploring sorting algorithms, matrix operations, and backtracking through the N-queens puzzle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about wrap section-inner" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">About me</p>
+        <h2 id="about-title">I learn by<br>building<span>.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p>I’m studying computer science and focusing on web development. I like projects that let me see what’s happening under the hood, whether that’s how a browser projects a 3D shape onto a canvas or how a parser handles nested syntax.</p>
+        <p>I’m interested in internships and junior roles where I can contribute to a team and keep building things people can use.</p>
+        <ul class="stack" aria-label="Tools and languages"><li>JavaScript</li><li>HTML &amp; CSS</li><li>Python</li><li>C++</li><li>Git</li></ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <div><p class="eyebrow">Contact</p><h2 id="contact-title">Let’s talk<span>.</span></h2></div>
+        <div>
+          <a class="email" id="email" href="mailto:braut429@gmail.com">braut429@gmail.com</a>
+          <div class="contact-links">
+            <button id="copy" type="button" hidden>Copy email</button>
+            <a href="https://github.com/bisheshr">GitHub</a>
+            <a href="https://www.linkedin.com/in/bishesh-raut-4393013a6/">LinkedIn</a>
+          </div>
+          <p id="copy-status" class="sr-only" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner"><span>© <span id="year">2026</span> Bishesh Raut</span><a href="#top">Back to top</a></div>
+  </footer>
+</body>
+</html>
